@@ -27,6 +27,8 @@ React Hook Form	7.71.2	Formularios optimizados (citas/login)
 Zustand	5.0.11	Estado global (NO Axios)
 SweetAlert2	11.26.22	Notificaciones elegantes
 VitePWA	1.2.0	PWA instalable
+
+
 📜 Licencia
 MIT License - Puedes usar, modificar y distribuir libremente este código para aprendizaje y proyectos personales/comerciales.
 
