@@ -4,7 +4,7 @@ Una plataforma profesional de gestión de citas clínicas construida con React 1
 ✨ Características principales
 ✅ Rutas completas con React Router DOM v7 (pacientes, citas, admin)
 
-✅ CRUD completo (GET, POST, PUT, DELETE) con APIs externas
+✅ CRUD completo (GET, POST) con APIs iniciada desde Docker Desktop (https://github.com/andriufit/api-citas-flask)
 
 ✅ Responsive 100%: Full HD (1920px), Laptop (990px), Tablet (767px), Móvil grande (510px), Móvil clásico (480px)
 
