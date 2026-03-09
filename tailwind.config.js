@@ -14,11 +14,11 @@ export default {
     },
     extend: {
       colors: {
-        primary: '#fb6f92',
-        secondary: '#ffe5ec',
-        accent: '#ffb3c6',
-        dark: '#1e1e24',
-        light: '#f8f9fa'
+        primary: '#7c3aed',
+        secondary: '#f3e8ff',
+        accent: '#a855f7',
+        dark: '#1e1b2e',
+        light: '#faf5ff'
       }
     },
   },

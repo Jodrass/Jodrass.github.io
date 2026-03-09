@@ -6,8 +6,14 @@ export const useAuthStore = create((set) => ({
     isAuthenticated: false,
 
     // Función para establecer la sesión tras un login exitoso
-    login: (userData) => set({ user: userData, isAuthenticated: true }),
+    login: (userData, token) => {
+        if (token) localStorage.setItem('access_token', token);
+        set({ user: userData, isAuthenticated: true });
+    },
 
     // Función para cerrar la sesión
-    logout: () => set({ user: null, isAuthenticated: false }),
+    logout: () => {
+        localStorage.removeItem('access_token');
+        set({ user: null, isAuthenticated: false });
+    },
 }));

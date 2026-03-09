@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuthStore } from './store/useAuthStore';
 import Login from './pages/Login';
+import Register from './pages/Register';
 import UserDashboard from './pages/UserDashboard';
+import NewAppointment from './pages/NewAppointment';
 import AdminDashboard from './pages/AdminDashboard';
 import MainLayout from './components/MainLayout';
 
@@ -12,7 +14,6 @@ const ProtectedRoute = ({ children, allowedRoles }) => {
   if (!isAuthenticated) return <Navigate to="/login" replace />;
 
   if (allowedRoles && !allowedRoles.includes(user?.role)) {
-    // Si no tiene el rol necesario, redirige acorde a su rol
     return <Navigate to={user?.role === 'admin' ? '/admin' : '/user'} replace />;
   }
 
@@ -25,8 +26,11 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* Rutas públicas */}
         <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
 
+        {/* Rutas protegidas bajo MainLayout */}
         <Route element={<MainLayout />}>
           {/* Redirección por defecto según el rol */}
           <Route path="/" element={
@@ -40,6 +44,12 @@ function App() {
           <Route path="/user" element={
             <ProtectedRoute allowedRoles={['user', 'admin']}>
               <UserDashboard />
+            </ProtectedRoute>
+          } />
+
+          <Route path="/new-appointment" element={
+            <ProtectedRoute allowedRoles={['user', 'admin']}>
+              <NewAppointment />
             </ProtectedRoute>
           } />
 

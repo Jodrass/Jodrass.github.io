@@ -7,3 +7,51 @@
     @apply bg-light text-dark font-sans antialiased;
   }
 }
+
+/* ── SweetAlert2 — tema ClinicaJoyfe ───────────────────── */
+.swal-popup {
+  border-radius: 1.25rem !important;
+  padding: 2rem !important;
+  font-family: inherit !important;
+}
+
+.swal-btn-primary,
+.swal-btn-danger {
+  background: #7c3aed;
+  color: white;
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0 0.25rem;
+}
+
+.swal-btn-danger {
+  background: #dc2626;
+}
+
+.swal-btn-primary:hover {
+  background: #a855f7;
+}
+
+.swal-btn-danger:hover {
+  background: #ef4444;
+}
+
+.swal-btn-cancel {
+  background: #f3e8ff;
+  color: #7c3aed;
+  font-weight: 700;
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.75rem;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin: 0 0.25rem;
+}
+
+.swal-btn-cancel:hover {
+  background: #e9d5ff;
+}
